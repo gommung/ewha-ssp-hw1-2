@@ -1,0 +1,46 @@
+#include "lab2_2_adv.h"
+#define FRONT_LED_PIN 10
+#define REAR_LED_PIN 9
+int start =1;
+
+void myAnalogWrite(int pin, int percent,int time){
+	int i;
+	for(i=0;i<time/20;i++){
+	digitalWrite(pin,HIGH);
+	delay(percent/5);
+	digitalWrite(pin,LOW);
+	delay(20-percent/5);
+
+	}
+}
+}
+
+
+void loop()
+{
+	int a;
+if(start==1){
+for(a=0;a<10;a++){
+	myAnalogWrite(REAR_LED_PIN,100-10*a,1000);
+
+}
+start=0;
+}
+}
+}
+
+
+void loop()
+{
+	int a;
+if(start==1){
+for(a=0;a<10;a++){
+	myAnalogWrite(REAR_LED_PIN,100-10*a,1000);
+
+}
+start=0;
+}
+}
+
+void setup()
+{pinMode(REAR_LED_PIN,OUTPUT);
